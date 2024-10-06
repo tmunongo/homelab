@@ -1,0 +1,191 @@
+[2024-10-05 10:30:47] local.DEBUG: Process Apps dispatched  
+[2024-10-05 10:30:49] local.DEBUG: Process Apps dispatched  
+[2024-10-05 10:30:55] local.DEBUG: Update of all apps triggered!  
+[2024-10-05 10:30:55] local.DEBUG: Update of all apps finished!  
+[2024-10-05 10:30:56] local.DEBUG: Process Apps dispatched  
+[2024-10-05 10:31:18] local.DEBUG: Process Apps dispatched  
+[2024-10-05 10:31:26] local.DEBUG: Process Apps dispatched  
+[2024-10-05 10:46:16] local.DEBUG: Process Apps dispatched  
+[2024-10-05 10:46:30] local.DEBUG: Process Apps dispatched  
+[2024-10-05 10:46:41] local.DEBUG: Process Apps dispatched  
+[2024-10-05 10:46:45] local.DEBUG: Get app triggered for: aebda823a279b219476c565be863d83739999502  
+[2024-10-05 10:46:45] local.DEBUG: Download triggered for stdClass Object
+(
+    [appid] => aebda823a279b219476c565be863d83739999502
+    [name] => Plex
+    [website] => https://www.plex.tv
+    [license] => Freemium
+    [description] => Plex media server allows you to aggregate all your personal media and access it anywhere you go. Enjoy your own content on all your devices with Plex.
+    [enhanced] => 1
+    [tile_background] => dark
+    [icon] => plex.png
+    [sha] => 4dd4107bacb262ca27e1280a909933ef0a2dcc51
+    [class] => App\SupportedApps\Plex\Plex
+)
+  
+[2024-10-05 10:49:33] local.ERROR: Connection refused  
+[2024-10-05 10:49:33] local.DEBUG: cURL error 7: Failed to connect to localhost port 32400 after 0 ms: Could not connect to server (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for http://localhost:32400/library/recentlyAdded?X-Plex-Token=  
+[2024-10-05 10:50:06] local.ERROR: Connection refused  
+[2024-10-05 10:50:06] local.DEBUG: cURL error 6: Could not resolve host: plex (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for http://plex:32400/library/recentlyAdded?X-Plex-Token=  
+[2024-10-05 10:52:13] local.ERROR: Connection refused  
+[2024-10-05 10:52:13] local.DEBUG: cURL error 6: Could not resolve host: plex (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for http://plex:32400/library/recentlyAdded?X-Plex-Token=  
+[2024-10-05 12:03:07] local.DEBUG: Get app triggered for: 3e0a7f109bd760b9474c78cb652e8c3e82669226  
+[2024-10-05 12:03:07] local.DEBUG: Download triggered for stdClass Object
+(
+    [appid] => 3e0a7f109bd760b9474c78cb652e8c3e82669226
+    [name] => Jellyfin
+    [website] => https://jellyfin.github.io
+    [license] => GNU General Public License v2.0 only
+    [description] => Jellyfin is the Free Software Media System that puts you in control of managing and streaming your media. There are no strings attached, no premium licenses or features, and no hidden agendas.
+    [enhanced] => 1
+    [tile_background] => dark
+    [icon] => jellyfin.svg
+    [sha] => eb2864a125d1fcb17e4b3bc07114ef89c75225f5
+    [class] => App\SupportedApps\Jellyfin\Jellyfin
+)
+  
+[2024-10-05 12:03:09] local.ERROR: View [Jellyfin.config] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [Jellyfin.config] not found. at /app/www/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php:137)
+[stacktrace]
+#0 /app/www/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php(92): Illuminate\\View\\FileViewFinder->findInPaths()
+#1 /app/www/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php(76): Illuminate\\View\\FileViewFinder->findNamespacedView()
+#2 /app/www/vendor/laravel/framework/src/Illuminate/View/Factory.php(137): Illuminate\\View\\FileViewFinder->find()
+#3 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(1020): Illuminate\\View\\Factory->make()
+#4 /app/www/routes/web.php(77): view()
+#5 /app/www/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(40): Illuminate\\Routing\\RouteFileRegistrar->{closure}()
+#6 /app/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(237): Illuminate\\Routing\\CallableDispatcher->dispatch()
+#7 /app/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(208): Illuminate\\Routing\\Route->runCallable()
+#8 /app/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate\\Routing\\Route->run()
+#9 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#10 /app/www/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#11 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#12 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#13 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#14 /app/www/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#15 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#16 /app/www/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#17 /app/www/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#18 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle()
+#19 /app/www/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#20 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#21 /app/www/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#22 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#23 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#24 /app/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate\\Pipeline\\Pipeline->then()
+#25 /app/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack()
+#26 /app/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate\\Routing\\Router->runRoute()
+#27 /app/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute()
+#28 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
+#29 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#30 /app/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#31 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#32 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#33 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#34 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#35 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#36 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#37 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#38 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#39 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#40 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#41 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#42 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#43 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
+#44 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#45 /app/www/public/index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle()
+#46 {main}
+"} 
+[2024-10-05 12:03:43] local.DEBUG: Get app triggered for: 3e0a7f109bd760b9474c78cb652e8c3e82669226  
+[2024-10-05 12:03:43] local.DEBUG: Download triggered for stdClass Object
+(
+    [appid] => 3e0a7f109bd760b9474c78cb652e8c3e82669226
+    [name] => Jellyfin
+    [website] => https://jellyfin.github.io
+    [license] => GNU General Public License v2.0 only
+    [description] => Jellyfin is the Free Software Media System that puts you in control of managing and streaming your media. There are no strings attached, no premium licenses or features, and no hidden agendas.
+    [enhanced] => 1
+    [tile_background] => dark
+    [icon] => jellyfin.svg
+    [sha] => eb2864a125d1fcb17e4b3bc07114ef89c75225f5
+    [class] => App\SupportedApps\Jellyfin\Jellyfin
+)
+  
+[2024-10-05 12:03:44] local.ERROR: View [Jellyfin.config] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [Jellyfin.config] not found. at /app/www/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php:137)
+[stacktrace]
+#0 /app/www/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php(92): Illuminate\\View\\FileViewFinder->findInPaths()
+#1 /app/www/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php(76): Illuminate\\View\\FileViewFinder->findNamespacedView()
+#2 /app/www/vendor/laravel/framework/src/Illuminate/View/Factory.php(137): Illuminate\\View\\FileViewFinder->find()
+#3 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(1020): Illuminate\\View\\Factory->make()
+#4 /app/www/routes/web.php(77): view()
+#5 /app/www/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(40): Illuminate\\Routing\\RouteFileRegistrar->{closure}()
+#6 /app/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(237): Illuminate\\Routing\\CallableDispatcher->dispatch()
+#7 /app/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(208): Illuminate\\Routing\\Route->runCallable()
+#8 /app/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate\\Routing\\Route->run()
+#9 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#10 /app/www/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#11 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#12 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#13 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#14 /app/www/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#15 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#16 /app/www/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#17 /app/www/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#18 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle()
+#19 /app/www/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#20 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#21 /app/www/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#22 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#23 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#24 /app/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate\\Pipeline\\Pipeline->then()
+#25 /app/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack()
+#26 /app/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate\\Routing\\Router->runRoute()
+#27 /app/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute()
+#28 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
+#29 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#30 /app/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#31 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#32 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#33 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#34 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#35 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#36 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#37 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#38 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#39 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#40 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#41 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#42 /app/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#43 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
+#44 /app/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#45 /app/www/public/index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle()
+#46 {main}
+"} 
+[2024-10-05 17:09:22] local.DEBUG: Get app triggered for: d0404064982ed19f24e76ca261e1fbb4d821c2a6  
+[2024-10-05 17:09:22] local.DEBUG: Download triggered for stdClass Object
+(
+    [appid] => d0404064982ed19f24e76ca261e1fbb4d821c2a6
+    [name] => CalibreWeb
+    [website] => https://github.com/janeczku/calibre-web
+    [license] => GNU General Public License v3.0
+    [description] => Calibre-Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.
+    [enhanced] => 
+    [tile_background] => dark
+    [icon] => calibreweb.png
+    [sha] => 7edd0c3312991eb5038a9b301993aa9da8c7c6f0
+    [class] => App\SupportedApps\CalibreWeb\CalibreWeb
+)
+  
+[2024-10-05 17:09:34] local.DEBUG: Get app triggered for: d0404064982ed19f24e76ca261e1fbb4d821c2a6  
+[2024-10-05 17:09:34] local.DEBUG: Download triggered for stdClass Object
+(
+    [appid] => d0404064982ed19f24e76ca261e1fbb4d821c2a6
+    [name] => CalibreWeb
+    [website] => https://github.com/janeczku/calibre-web
+    [license] => GNU General Public License v3.0
+    [description] => Calibre-Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.
+    [enhanced] => 
+    [tile_background] => dark
+    [icon] => calibreweb.png
+    [sha] => 7edd0c3312991eb5038a9b301993aa9da8c7c6f0
+    [class] => App\SupportedApps\CalibreWeb\CalibreWeb
+)
+  

@@ -1,0 +1,91 @@
+services:
+  mount-checker:
+    image: busybox
+    command: sh -c "
+      while [ ! -d /mnt/external ]; do 
+        echo '/mnt/external directory not found'; 
+        sleep 1; 
+      done;
+      while ! mountpoint -q /mnt/external; do 
+        echo '/mnt/external is not a mountpoint'; 
+        sleep 1; 
+      done;
+      echo '/mnt/external is mounted';
+      tail -f /dev/null"
+      # command: sh -c "while [ ! -d /mnt/external ] || ! mountpoint -q /mnt/external; do sleep 1; done"
+    volumes:
+      - /media/$USER/External:/mnt/external
+    healthcheck:
+      test: ["CMD", "mountpoint", "-q", "/mnt/external"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 15s
+
+  heimdall:
+    image: lscr.io/linuxserver/heimdall:latest
+    container_name: heimdall
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Africa/Harare
+    volumes:
+      - ./config/heimdall.conf:/config
+    ports:
+      - 80:80
+      - 443:443
+    restart: unless-stopped
+
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    depends_on:
+      mount-checker:
+        condition: service_healthy
+    container_name: plex
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Africa/Harare
+      - VERSION=docker
+      - PLEX_CLAIM= #optional
+    volumes:
+      - /media/$USER/External/homelab/plex:/config
+      - /media/$USER/External/Series:/tv
+      - /media/$USER/External/Movies:/movies
+      - /media/$USER/External/Music:/music
+    restart: unless-stopped
+
+  samba:
+    image: dockurr/samba
+    container_name: samba
+    depends_on:
+      mount-checker:
+        condition: service_healthy
+    environment:
+      USER: "samba"
+      PASS: "secret"
+    ports:
+      - 445:445
+    volumes:
+      - /media/$USER/External:/storage
+  
+  calibre-web:
+    image: lscr.io/linuxserver/calibre-web:latest
+    container_name: calibre-web
+    depends_on:
+      mount-checker:
+        condition: service_healthy
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Africa/Harare
+      - DOCKER_MODS=linuxserver/mods:universal-calibre #optional
+      - OAUTHLIB_RELAX_TOKEN_SCOPE=1 #optional
+    volumes:
+      - /media/$USER/External/homelab/calibre:/config
+      - /media/$USER/External/homelab/calibre/books:/books
+    ports:
+      - 8083:8083
+    restart: unless-stopped
+
