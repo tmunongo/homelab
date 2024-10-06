@@ -63,8 +63,8 @@ services:
       mount-checker:
         condition: service_healthy
     environment:
-      USER: "samba"
-      PASS: "secret"
+      USER: ${SAMBA_USER}
+      PASS: ${SAMBA_PASS}
     ports:
       - 445:445
     volumes:
