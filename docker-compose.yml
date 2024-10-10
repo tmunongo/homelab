@@ -1,6 +1,7 @@
 services:
   mount-checker:
     image: busybox
+    restart: always
     command: sh -c "
       while [ ! -d /mnt/external ]; do 
         echo '/mnt/external directory not found'; 
@@ -89,3 +90,26 @@ services:
       - 8083:8083
     restart: unless-stopped
 
+  transmission-openvpn:
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - /media/$USER/External/Downloads:/data
+      - /media/$USER/External/homelab/transmission:/config
+      - /media/$USER/External/homelab/openvpn/:/etc/openvpn/custom
+    environment:
+      - OPENVPN_PROVIDER=custom
+      - OPENVPN_CONFIG=${OPENVPN_CONFIG}
+      - OPENVPN_USERNAME=${OPENVPN_USER}
+      - OPENVPN_PASSWORD=${OPENVPN_PASS}
+      - LOCAL_NETWORK=192.168.1.0/24
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+    ports:
+      - 9091:9091
+    image: haugene/transmission-openvpn
+    depends_on:
+      mount-checker:
+        condition: service_healthy
