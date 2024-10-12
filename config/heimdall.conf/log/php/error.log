@@ -76,3 +76,17 @@
 [10-Oct-2024 12:26:35] NOTICE: ready to handle connections
 [10-Oct-2024 15:22:39] NOTICE: fpm is running, pid 228
 [10-Oct-2024 15:22:39] NOTICE: ready to handle connections
+[10-Oct-2024 21:14:50] NOTICE: Terminating ...
+[10-Oct-2024 21:14:50] NOTICE: exiting, bye-bye!
+[10-Oct-2024 21:14:56] NOTICE: fpm is running, pid 228
+[10-Oct-2024 21:14:56] NOTICE: ready to handle connections
+[12-Oct-2024 13:07:23] NOTICE: Terminating ...
+[12-Oct-2024 13:07:23] NOTICE: exiting, bye-bye!
+[12-Oct-2024 13:07:29] NOTICE: fpm is running, pid 235
+[12-Oct-2024 13:07:29] NOTICE: ready to handle connections
+[12-Oct-2024 13:15:54] NOTICE: fpm is running, pid 234
+[12-Oct-2024 13:15:54] NOTICE: ready to handle connections
+[12-Oct-2024 13:25:18] NOTICE: Terminating ...
+[12-Oct-2024 13:25:18] NOTICE: exiting, bye-bye!
+[12-Oct-2024 13:25:24] NOTICE: fpm is running, pid 226
+[12-Oct-2024 13:25:24] NOTICE: ready to handle connections
